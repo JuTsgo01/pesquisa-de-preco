@@ -35,7 +35,7 @@ def define_dates(now, specific_time):
     'start_at' e 'end_at'.
 
     Ela também definirá as datas que usarei como referencia dentro do dataframe e, consequentemente, dos arquivos CSV, XSLX e o nome 
-    dos mesmos arquivos.
+    dos mesmos arquivos. Variaveis essas que são: 'start_at_formatada', 'end_at_formatada'
     
     """
     today_at_specific_time = datetime.combine(now.date(), specific_time, tzinfo=timezone)
@@ -316,7 +316,7 @@ if __name__ == "__main__":
     df_filtered.rename(columns={'name': 'produto', 'unit': 'unidade',
                                 'user': 'responsável', 'answer.text': 'valor'}, inplace=True)
 
-    #Aqui criei um dicionário para renomear as lojas
+    #Aqui criei um dicionário para renomear as lojas no dataframe
     store_mapping = {
         'Araraquara Centro': 1,
         'Ribeirão Preto': 2,
@@ -394,6 +394,7 @@ if __name__ == "__main__":
         'SP Saúde': 74
     }
 
+    #Aqui criei um dicionário que será usado para renomear os produtos para um nome mais 'clean'
     product_dict = {
         "Amstel 600ml": "A_600",
         "Amstel LN 355ml": "A_LN",
