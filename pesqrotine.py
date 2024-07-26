@@ -27,6 +27,17 @@ url_base_analytics = 'https://api-analytics.checklistfacil.com.br/'
 token = os.getenv('TOKEN')
 
 def define_dates(now, specific_time):
+    
+    """
+    Essa função está sendo usada para definir algumas datas em horários especifico determinado pelo timezone.
+
+    Ela define as dastas iniciais e finais que usaremos direto na api de acordo com o formado ISO 8601, sendo elas as váriaveis
+    'start_at' e 'end_at'.
+
+    Ela também definirá as datas que usarei como referencia dentro do dataframe e, consequentemente, dos arquivos CSV, XSLX e o nome 
+    dos mesmos arquivos.
+    
+    """
     today_at_specific_time = datetime.combine(now.date(), specific_time, tzinfo=timezone)
     start_at = today_at_specific_time - timedelta(days=34) #data inicial formata no fuso horário especificado (ISO 8601)
     end_at = today_at_specific_time - timedelta(days=31)# data final formata no fuso horário especificado (ISO 8601)
