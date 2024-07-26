@@ -54,8 +54,14 @@ O script faz o seguinte:
     - email
     
 ## Configuração
-    
-1. Criação de Arquivo '.env'
+
+3. Instalação de Dependências
+
+```bash
+    pip install -r requirements.txt
+```
+
+2. Criação de Arquivo '.env'
 
     Crie um arquivo '.env' na raiz do projeto com as seguintes variáveis:
 
@@ -67,8 +73,3 @@ O script faz o seguinte:
     AWS_SECRET_ACCESS_KEY=your_aws_secret_access_key
 ```
 
-2. Instalação de Dependências
-
-```bash
-    pip install -r requirements.txt
-```
