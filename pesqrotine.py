@@ -212,7 +212,7 @@ def send_email():
     except NoCredentialsError:
         print("Credentials not available.")
     except PartialCredentialsError:
-        print("Incomplete credentials provided.")
+        print("Credenciais fornecidas estão incompletas.")
     except Exception as e:
         print(f"Erro ao enviar e-mail: {e}")    
    
